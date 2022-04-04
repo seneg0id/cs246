@@ -214,23 +214,23 @@ void Directory::printDirectory()
     for (int i = 0; i < sz; i++)
     {
 
-        vector<int> binary_rep;
-        for (int j = 0; j < 31; j++)
-        {
-            if ((1 << j) & i)
-            {
-                binary_rep.push_back(1);
-            }
-            else
-            {
-                binary_rep.push_back(0);
-            }
-        }
-        for (int j = global_depth - 1; j >= 0; j--)
-        {
-            cout << binary_rep[j];
-        }
-        cout << " ";
+//         vector<int> binary_rep;
+//         for (int j = 0; j < 31; j++)
+//         {
+//             if ((1 << j) & i)
+//             {
+//                 binary_rep.push_back(1);
+//             }
+//             else
+//             {
+//                 binary_rep.push_back(0);
+//             }
+//         }
+//         for (int j = global_depth - 1; j >= 0; j--)
+//         {
+//             cout << binary_rep[j];
+//         }
+//         cout << " ";
         for (int j = 0; j < dir[i]->no_of_keys; j++)
         {
             cout << dir[i]->data[j] << " ";
@@ -284,6 +284,6 @@ int main()
             break;
         }
     }
-    d.printDirectory();
+//     d.printDirectory();
     return 0;
 }
